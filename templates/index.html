@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+  <div class="container mx-auto mt-10">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold text-gray-700">Task Manager</h1>
+      <p class="text-gray-500 mt-2">Manage your tasks effectively</p>
+    </div>
+    
+    <!-- Add Task Form -->
+    <div class="mt-8 bg-white shadow-md rounded p-6">
+      <h2 class="text-2xl font-bold text-gray-700">Add New Task</h2>
+      <form id="addTaskForm" class="mt-4">
+        <div class="flex flex-wrap -mx-3 mb-6">
+          <div class="w-full md:w-1/2 px-3 mb-4">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Title</label>
+            <input type="text" id="taskTitle" class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" placeholder="Task title" required>
+          </div>
+          <div class="w-full md:w-1/2 px-3 mb-4">
+            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Priority</label>
+            <select id="taskPriority" class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+        </div>
+        <div class="w-full mb-4">
+          <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Due Date</label>
+          <input type="date" id="taskDueDate" class="block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" required>
+        </div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Task</button>
+      </form>
+    </div>
+
+    <!-- Task List -->
+    <div class="mt-10 bg-white shadow-md rounded p-6">
+      <h2 class="text-2xl font-bold text-gray-700">Task List</h2>
+      <div id="taskList" class="mt-4">
+        <!-- Tasks will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
