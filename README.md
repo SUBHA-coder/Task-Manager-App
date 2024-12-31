@@ -21,7 +21,4 @@ A simple task management application built with Go (Golang), SQLite, HTML, CSS, 
 
 ### Steps to Run Locally
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/task-manager-app.git
-   cd task-manager-app
+
